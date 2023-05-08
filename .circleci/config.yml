@@ -31,10 +31,10 @@ jobs:
             python manage.py test
           name: Tests
           # This assumes pytest is installed via the install-package step above
-      - restore_cache:
-            keys:
-              - v1-dependencies-{{ checksum "Gemfile.lock" }}
-              - v1-dependencies-
+      # - restore_cache:
+      #       keys:
+      #         - v1-dependencies-{{ checksum "Gemfile.lock" }}
+      #         - v1-dependencies-
 
 workflows:
   demo_test_workflow: # This is the name of the workflow, feel free to change it to better match your workflow.
